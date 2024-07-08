@@ -1,0 +1,56 @@
+feature_extract_enable : 0
+point_filter_num : 4
+max_iteration : 10
+dense_map_enable : 0
+filter_size_surf : 0.5
+filter_size_map : 0.5
+cube_side_length : 20 
+debug : 0
+grid_size : 25
+patch_size : 8
+voxel_size: 1.5
+outlier_threshold : 300
+ncc_en: false
+ncc_thre: 0.5
+img_enable : 1
+lidar_enable : 1
+
+common:
+    lid_topic:  "/velodyne_points"
+    imu_topic:  "/imu"
+
+preprocess:
+    lidar_type: 2
+    scan_line: 32
+    blind: 2
+
+localization:
+    acc_cov_scale: 100
+    gyr_cov_scale: 10000
+    fov_degree:    180
+    laser_point_cov : 0.0001
+    extrinsic_T_Lidar_wrt_IMU: [ 0.158, 0.6, 1.6955]
+    extrinsic_R_Lidar_wrt_IMU: [ 1, 0, 0,
+                                 0, 1, 0,
+                                 0, 0, 1]
+
+camera:
+    img_topic: /cam1_prep
+    img_point_cov : 4000
+    extrinsic_T_Lidar_wrt_Cam: [-0.013, -0.181, -0.13]
+    extrinsic_R_Lidar_wrt_Cam: [ 1,  0,  0,
+                                 0 , 0, -1,
+                                 0,  1,  0] 
+
+wheel_encoder:
+    wheel_encoder_topic: "/wheel_encoder"
+    frequency: 100
+    pulse_resolution: 0.0100
+
+    extrinsic_R_Wheel_wrt_IMU: [ 1, 0, 0, 
+                                 0, 1, 0, 
+                                 0, 0, 1]
+    extrinsic_T_Wheel_wrt_IMU: [ 0, 0, 0]
+
+    wheel_encoder_p_cov: 0.08
+    wheel_encoder_v_cov: 0.01
