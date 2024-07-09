@@ -1,0 +1,24 @@
+<launch>
+	<param name="/use_sim_time" value="true" />
+
+	<arg name="rviz" default="true" />
+
+	<node pkg="tf" type="static_transform_publisher" name="map2camera_init" args="0 0 0   0 0 0 1 map camera_init 100" />
+    <node pkg="tf" type="static_transform_publisher" name="body2lidar" args="0.158 0.6 1.6955   0 0 0 1 body velodyne 100" />
+
+	<rosparam command="load" file="$(find livw_localization)/config/lidar_velodyne.yaml" />
+	<rosparam file="$(find livw_localization)/config/camera_pinhole.yaml" />
+
+	<node pkg="livw_localization" type="livw_localization_node" name="livw_localization_node_node" output="screen" >
+
+		<remap from="/rgb_img" to="/rgb_img_with_selected_point" />
+		<remap from="/path" to="/livw_localization/path" />
+		<remap from="/odometry" to="/livw_localization/odometry" />
+	</node>
+	
+	<group if="$(arg rviz)">
+		<node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find livw_localization)/rviz_cfg/livw_localization.rviz" />
+	</group>
+	<node pkg="image_transport" type="republish" name="republish" args="compressed in:=/cam1_prep raw out:=/cam1_prep" output="screen" respawn="true"/>
+
+</launch>
