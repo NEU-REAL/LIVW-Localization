@@ -56,8 +56,27 @@ source ~/catkin_ws/devel/setup.bash
 
 ## 4. Run the package
 
+Our datasets. Due to the sensitivity of geographic information, we apologize that our dataset cannot be made public. But if your own dataset can include the following topics, you can successfully run the code:
+
+```
+lid_topic:      	 type: sensor_msgs/PointCloud2
+imu_topic: 			 type: sensor_msgs/Imu
+img_topic:			 type: sensor_msgs/CompressedImage
+wheel_encoder_topic: type: see `msg/encoder.msg`
+```
+
+Please note that you should edit the `config/xxx.yaml` to adapt your private dataset.
+
+### 4.1 Run on your dataset
+
+```
+roslaunch livw_localization localization_velodyne_dataset.launch
+rosbag play YOUR_DATASET.bag --clock
+```
+
 
 
 ## 5. Acknowledgments
 
 Thanks for [FAST-LIVO](https://github.com/hku-mars/FAST-LIVO), [FAST-LIO2](https://github.com/hku-mars/FAST_LIO) and [SVO2.0](https://github.com/uzh-rpg/rpg_svo_pro_open). 
+
