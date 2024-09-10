@@ -1,5 +1,13 @@
 # LIVW-Localization
-A Multi-modal Information Fused Vehicle Localization method for Complex, Large-Scale and GNSS-Denied Environments.
+LIVW-Localization: A Multimodal Information Fused Vehicle Localization Method for Complex, Large-Scale, and GNSS-Denied Environments
+
+**Related video:** [LIVW-localization](https://youtu.be/EVDpuL647hg)
+
+**Overview:**
+
+![Overview](./doc/SystemOverview.png "System Overview")
+
+
 
 ## 1. Introduction
 
@@ -79,4 +87,21 @@ rosbag play YOUR_DATASET.bag --clock
 ## 5. Acknowledgments
 
 Thanks for [FAST-LIVO](https://github.com/hku-mars/FAST-LIVO), [FAST-LIO2](https://github.com/hku-mars/FAST_LIO) and [SVO2.0](https://github.com/uzh-rpg/rpg_svo_pro_open). 
+
+
+
+## 6. Citation
+
+```
+@ARTICLE{Wang_LIVW-Localization_2025,
+  author={Wang, Jibo and Shen, Zhaohui and Lan, Zhengyang and Pang, Chenglin and Fang, Zheng},
+  journal={IEEE Sensors Journal}, 
+  title={LIVW-Localization: A Multimodal Information Fused Vehicle Localization Method for Complex, Large-Scale, and GNSS-Denied Environments}, 
+  year={2024},
+  volume={24},
+  number={19},
+  pages={30315-30328},
+  doi={10.1109/JSEN.2024.3434491}
+}
+```
 
