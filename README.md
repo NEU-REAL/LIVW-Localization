@@ -93,7 +93,7 @@ Thanks for [FAST-LIVO](https://github.com/hku-mars/FAST-LIVO), [FAST-LIO2](https
 ## 6. Citation
 
 ```
-@ARTICLE{Wang_LIVW-Localization_2025,
+@ARTICLE{Wang_LIVW-Localization_2024,
   author={Wang, Jibo and Shen, Zhaohui and Lan, Zhengyang and Pang, Chenglin and Fang, Zheng},
   journal={IEEE Sensors Journal}, 
   title={LIVW-Localization: A Multimodal Information Fused Vehicle Localization Method for Complex, Large-Scale, and GNSS-Denied Environments}, 
