@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2024, Neatheastern University
+ *  Copyright (c) 2024, Northeastern University
  *  All rights reserved.
  *
  *  Author: Jibo Wang
@@ -14,7 +14,7 @@
  *     copyright notice, this list of conditions and the following
  *     disclaimer in the documentation and/or other materials provided
  *     with the distribution.
- *   * Neither the name of the Universitaet Bremen nor the names of its
+ *   * Neither the name of the Northeastern University nor the names of its
  *     contributors may be used to endorse or promote products derived
  *     from this software without specific prior written permission.
  *
